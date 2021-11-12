@@ -91,5 +91,51 @@ const addEmployee = () => {
             default: false
         },
     ])
-    .then
-}
+    .then(employeeData => {
+
+        let {name, id, email, role, github, school, confirmNewMember } = employeeData;
+        let employee;
+
+        if (role === "Engineer") {
+            employee = new Engineer (name, id, email, github);
+
+            console.log(employee);
+
+        } else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+
+            console.log(employee);
+        }
+
+        memberArray.push(employee);
+
+        if(confirmNewMember) {
+            return confirmNewMember(memberArray);
+        } else {
+            return memberArray;
+        }
+    })
+};
+
+const writeFile = data => {
+    fs.writeFile('./dist/team.html', data, err => {
+
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Your team page has been created successfully!")
+        }
+    })
+};
+
+addManager()
+.then(addEmployee)
+.then(memberArray => {
+    return htmlGen(memberArray);
+}).then(renderHTML => {
+    return writeFile(renderHTML);
+})
+.catch(err => {
+    console.log(err);
+});
