@@ -18,7 +18,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Who is the manager of this team?',
+            message: 'What is the managers nae??',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -31,7 +31,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: "Please enter the manager's ID.",
+            message: "What is the managers ID?",
             validate: nameInput => {
                 if (isNaN(nameInput)) {
                     console.log("Please enter the manager's ID!")
