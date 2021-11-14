@@ -55,3 +55,20 @@ const generateIntern = function (intern) {
 </div>
     `
 };
+
+// moving the array onto the page
+genHTML = (data) => {
+
+    // array which will store cards
+    htmlArray = [];
+
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+
+        
+    }
+
+}
+
+module.exports = genHTML;
