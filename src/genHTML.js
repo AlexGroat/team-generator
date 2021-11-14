@@ -66,9 +66,27 @@ genHTML = (data) => {
         const employee = data[i];
         const role = employee.getRole();
 
-        
+        // call manager
+        if (role === 'Manager') {
+            const managerDisplay = generateManager(employee);
+
+            htmlArray.push(managerDisplay);
+        }
+
+        if (role === 'Engineer') {
+            const engineerDisp = generateEngineer(employee);
+
+            htmlArray.push(engineerDisp);
+        }
+
+        if (role === 'Intern') {
+            const internDisp = generateIntern(employee);
+
+            htmlArray.push(internDisp);
+        }
     }
 
+ 
 }
 
 module.exports = genHTML;
