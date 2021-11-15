@@ -1,25 +1,25 @@
 const Employee = require('../lib/Employee');
 
-test("Set a name using const function", () => {
-    const name = "Alex Groat";
+test("Ability to set name using constructor function", () => {
+    const name = "Alex";
     const employee = new Employee(name);
-    expect(employee.name).toEqual(name);
-});
+    expect(employee.name).toBe(name);
+  });
 
-test("Set an ID using const function", () => {
+test("Ability to set the user ID using constructor function", () => {
     const id = "1";
-    const employee = new Employee("Alex Groat", id, "a.groat.codes@gmail.com");
-    expect(employee.id).toEqual(id);
-});
+    const employee = new Employee("Alex", id, "a.groat.codes@gmail.com");
+    expect(employee.id).toBe(id);
+  });
 
-test("Passing in getEmail() should return the correct email", () => {
+test("Running getEmail() should return the supplied email", () => {
     const email = "a.groat.codes@gmail.com";
-    const employee = new Employee("Alex Groat", 1, email);
-    expect(employee.getEmail()).toEqual(email);    
-});
+    const employee = new Employee("Alex", 1, email);
+    expect(employee.getEmail()).toBe(email);
+  });
 
-test("Passing in getRole() should return Employee", () => {
+test("Running getRole() should return 'Employee'", () => {
     const role = "Employee";
-    const employee = new Employee("Alex Groat", 1, "a.groat.codes@gmail.com");
-    expect(employee.getRole()).toEqual(role);
-});
+    const employee = new Employee("Alex", 1, "a.groat.codes@gmail.com");
+    expect(employee.getRole()).toBe(role);
+  });
