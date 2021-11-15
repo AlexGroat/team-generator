@@ -18,7 +18,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is the managers nae??',
+            message: 'What is the managers name?',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -179,7 +179,7 @@ const addMember = () => {
             memberArray.push(employee);
 
             if (confirmAddEmployee) {
-                return addEmployee(memberArray);
+                return addMember(memberArray);
             } else {
                 return memberArray;
             }
