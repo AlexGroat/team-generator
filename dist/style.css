@@ -1,0 +1,25 @@
+:root {
+    --blue: #22577a;
+    --lightblue: #38a3a5;
+    --aqua: #57cc99;
+    --green: #80ed99;
+    --tea: #c7f9cc;
+}
+
+body {
+    background-color: var(--tea);
+}
+
+.navbar {
+    background-color: var(--aqua);
+    color: azure;
+}
+
+.card-header {
+    background-color: var(--lightblue);
+    color: azure;
+}
+
+.card-body {
+    background-color: var(--green);
+}
