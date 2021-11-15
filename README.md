@@ -13,6 +13,8 @@
     
 ## Description
 This is a command line application which receives user input of employees on a development team and generates a HTML page that displays a brief description of each employee. To view a demonstration of the application please click the following link to be taken to a walkthrough video: https://watch.screencastify.com/v/ik7hi9tzqV1kcmU2sIHh.
+
+A sample of this application can be found in the dist folder. 
     
 ## Installation
 Clone the repository to you working directory, then run 'npm i' to install the required dependencies. Once you have done this run 'node index.js' in the terminal and follow the prompts and create your team.
